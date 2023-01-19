@@ -68,3 +68,14 @@ function getRemainningTime(){
 }
 const countdown = setInterval(getRemainningTime,1000);
 getRemainningTime();
+
+
+//nav script
+
+const toggle = document.querySelector(".nav-toggle");
+const links = document.querySelector(".links");
+toggle.addEventListener("click", function(){
+    const classListOfLinks = links.classList;
+    classListOfLinks.toggle("show-links");
+    
+})
