@@ -10,25 +10,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"></link>
 </head>
 <body>
+    <!--nav-->
     <nav>
-        <div class="nav-center">
+        <div class="nav-center ">
             <div class="nav-header">
-                <div class="logo">Trip Planer</div>
+                <div class="logo">Trip Planner</div>
                 <button class="nav-toggle">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
             <ul class="links">
                 <li>
-                    <a href="#countdown-section">countdown</a>
-                    <a href="#place-to-go-section">places</a>
-                    <a href="#things-to-do-section">activities</a>
+                    <a href="#countdown" class="scroll-link">countdown</a>
+                    <a href="#places" class="scroll-link">places</a>
+                    <a href="#activities" class="scroll-link">activities</a>
                 </li>
             </ul>
         </div>
         
     </nav>
-    <section class="countdown-section">
+    <!--countdown-section-->
+    <section class="countdown-section" id="countdown">
         <article class="countdown-image">
             <img src="./newyork.jpg" atl="photo of bridge in NewYork">
         </article>
@@ -64,6 +66,19 @@
             </div>
             
         </article>
+    </section>
+    <!--places-section-->
+    <section class="places-section" id="places">
+        <div class="title" >
+            <h2>Fun <span>places</span></h2>
+        </div>
+
+    </section>
+    <section class="activities-section" id="activities">
+        <div class="title" >
+            <h2>Fun <span>activities</span></h2>
+        </div>
+
     </section>
     
     <script src="app.js"></script>

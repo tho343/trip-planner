@@ -47,7 +47,7 @@ Variables
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
-  --spacing: 0.25rem;
+  --spacing: 0.15rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -55,6 +55,15 @@ Variables
   --fixed-width: 620px;
 }
 /* global styles*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body{
     margin:0;
     line-height: 1.75rem;
@@ -96,30 +105,8 @@ h1 {
     margin-bottom: 1.25rem;
     color: var(--clr-blue-5);
   }
-  @media screen and (min-width: 800px) {
-    h1 {
-      font-size: 4rem;
-    }
-    h2 {
-      font-size: 2.5rem;
-    }
-    h3 {
-      font-size: 1.75rem;
-    }
-    h4 {
-      font-size: 1rem;
-    }
-    body {
-      font-size: 1rem;
-    }
-    h1,
-    h2,
-    h3,
-    h4 {
-      line-height: 1;
-    }
-  }
-/* global classes*/
+ 
+/* == global classes ==*/
 
 .btn {
     text-transform: uppercase;
@@ -159,7 +146,7 @@ main {
   */
 .countdown-section img{
     border-radius: var(--radius);
-    max-width: 75%;
+    max-width:100%;
     height: auto;
 }
 .deadline {
@@ -185,19 +172,14 @@ main {
     letter-spacing: 2px;
     font-size: 1rem;
 }
-@media  screen and (min-width: 992px) {
-    .countdown-section{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-        max-width: 1170px;
-        place-items: center;
-    }
-}
+
 .countdown-section {
-    width: 90vw;
+    width: auto;
     margin: 5rem 5rem;
     max-width: 1170px;
+  }
+  .countdown-info{
+    padding-top: 1rem;
   }
 
 /* === nav center ===*/
@@ -256,11 +238,18 @@ nav{
 .links.show-links li{
   margin-bottom: 0;
 }
-
+.fixed-nav{
+  position:fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  background-color: white;
+  box-shadow: var(--light-shadow);
+}
 
 @media screen and (min-width: 800px) {
   .nav-center {
-    max-width: 1170px;
+   
 
     display: flex;
     justify-content: space-between;
@@ -287,4 +276,31 @@ nav{
     padding: 0;
     background: transparent;
   }
+  .countdown-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1170px;
+    place-items: center;
+  
 }
+
+}
+
+
+
+/* == places section==*/
+.title h2{
+  text-align: center;
+  text-transform: uppercase;
+}
+#places,
+#activities{
+  height: 80vh;
+  
+}
+#places{
+  background-color: var(--clr-white);
+}
+
+

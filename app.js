@@ -79,3 +79,41 @@ toggle.addEventListener("click", function(){
     classListOfLinks.toggle("show-links");
     
 })
+
+//scroll script
+
+const navCenter = document.querySelector(".nav-center");
+window.addEventListener("scroll",function(){
+    if(this.window.pageYOffset > navCenter.getBoundingClientRect().height){
+        navCenter.classList.add("fixed-nav");;
+    }else{
+        navCenter.classList.remove("fixed-nav");
+    }
+})
+
+const sections = document.querySelectorAll(".scroll-link");
+
+sections.forEach(function(section){
+    section.addEventListener("click",function(e){
+        e.preventDefault();
+        const id = e.currentTarget.getAttribute("href").slice(1);
+        const element = document.getElementById(id);
+        const navHeight = navCenter.getBoundingClientRect().height;
+        const linkContainer = document.querySelector(".links");
+        
+        let position = element.offsetTop - navHeight;
+        const fixedNavBar = navCenter.classList.contains("fixed-nav");
+       if(!fixedNavBar){
+        position =position - navHeight;
+       }
+       if(navCenter.getBoundingClientRect().height > 81){
+        position = position + linkContainer.getBoundingClientRect().height;
+       }
+       
+        window.scrollTo(
+            let = 0,
+            top = position
+        )
+        links.classList.remove("show-links");
+    })
+})
