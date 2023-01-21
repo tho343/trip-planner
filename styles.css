@@ -294,13 +294,40 @@ nav{
   text-align: center;
   text-transform: uppercase;
 }
-#places,
+#weather,
 #activities{
-  height: 80vh;
+  height: auto;
   
 }
-#places{
+#weather{
   background-color: var(--clr-white);
+}
+/*===weather====*/
+.weather-station-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--clr-blue-10);
+  box-shadow: var(--light-shadow);
+  border-radius: var(--radius);
+  padding:2rem;
+  width:100%;
+  max-width: 400px;
+
+}
+.description-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.w {
+  display: flex;
+  justify-content: center;
+  
+}
+section#weather {
+  padding: 5rem 5rem;
 }
 
 
