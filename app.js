@@ -117,3 +117,30 @@ sections.forEach(function(section){
         links.classList.remove("show-links");
     })
 })
+
+//weather app
+
+let weather = {
+    "apiKey": "3d5b7ed0e9a55a709cad2d74cfc72321",
+    fetchWeather : function(){
+        fetch(
+            "https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&units=metric&appid=3d5b7ed0e9a55a709cad2d74cfc72321"
+        ).then((response) => response.json())
+        .then((data) => this.displayWeather(data))
+    },
+    displayWeather: function(data){
+        const {description} = data.weather[0];
+        const {temp} = data.main;
+        const {speed} = data.wind;
+        const {humidity} = data.main;
+        const {icon} = data.weather[0];
+        document.querySelector(".temp").innerHTML = `${temp} Celcius degree`;
+        document.querySelector(".description").innerHTML = `${description}`;
+        document.querySelector(".humidity").innerHTML = `Humidity: ${humidity} %`;
+        document.querySelector(".wind").innerHTML = `Wind speed: ${speed} km/h`;
+        document.querySelector(".icon").src = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
+    }
+}
+window.addEventListener("load",function(){
+    weather.fetchWeather();
+})
