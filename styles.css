@@ -346,6 +346,8 @@ section#weather {
 .btn-container{
   display: flex;
   flex-direction: column;
+  max-width: 138px;
+  height: auto;
 }
 .activities-section{
   padding:5rem;
