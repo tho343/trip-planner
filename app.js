@@ -151,37 +151,37 @@ const activities = [
         id: 1,
         day: "Saturday",
         date: "01/28/2023",
-        plan: "8AM: checkin" 
+        plan: "<ul><li>8:00am : luggage checking <li><li>10:00am - 3:00pm : chinatown<li> <li>3:00 : Checking hotel<li><li> <li>8:00pm : timesquare <li></ul>" 
     },
     {
         id: 2,
         day: "Sunday",
         date: "01/29/2023",
-        plan: "skiiing" 
+        plan: "<ul><li>Metropolitan Museum Art<li></ul>"  
     },
     {
         id: 3,
         day: "Monday",
         date: "01/30/2023",
-        plan: "8AM: checkin" 
+        plan: "<ul><li>Philadelphia<li></ul>" 
     },
     {
         id: 4,
         day: "Tuesday",
         date: "02/01/2023",
-        plan: "8AM: checkin" 
+        plan: "<ul><li>4:00pm : Train to NewYork<li><li>7:00pm : Korean town</li></ul>" 
     },
     {
         id: 5,
         day: "Wednesday",
         date: "02/02/2023",
-        plan: "8AM: checkin" 
+        plan: "<ul><li>1:30pm Summit one vanderbilt<li><ul><li>6:15pm : Omakase (Takumi 181 Essex St, New York, NY 10002)<li></ul></ul>" 
     },
     {
         id: 6,
         day: "Thursday",
         date: "02/03/2023",
-        plan: "8AM: checkin" 
+        plan: "<ul><li>9:30am : Nu than tu do<li></ul>" 
     }
 ]
 const activity = document.querySelector(".activities");
@@ -215,6 +215,7 @@ activity.addEventListener("click",function(e){
 const displayPlan = (dayActivity) =>{
     let showDay = dayActivity.map(function(day){
         let dayActivity = `<div class="content" id=${day.date}>
+
                         <h3>${day.plan}</h3>
                     </div>`;
                     return dayActivity;
@@ -226,7 +227,7 @@ const displayPlan = (dayActivity) =>{
 }
 const displayButton = (dayActivity) =>{
     let showButton = dayActivity.map(function(day){
-        return `<button class="tab-btn active" data-id="${day.date}">${day.date}</button>`
+        return `<button class="tab-btn active" data-id="${day.date}">${day.day} ${day.date}</button>`
     }).join("");
     btnsContainer.innerHTML = showButton;
 }
