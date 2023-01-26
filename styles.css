@@ -332,7 +332,7 @@ section#weather {
 
 /*===activity===*/
 .tab-btn{
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   border:none;
   text-transform: capitalize;
   font-size: 1rem;
@@ -341,6 +341,7 @@ section#weather {
   cursor: pointer;
   transition: var(--transition);
   letter-spacing: var(--spacing);
+  color: var(--clr-blue-1);
 }
 .btn-container{
   display: flex;
@@ -370,4 +371,8 @@ article.activities{
 }
 .content.active{
   display: block;
+}
+article.activity-content {
+  padding-top: 1rem;
+  padding-left: 1rem;
 }
