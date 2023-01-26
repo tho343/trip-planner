@@ -356,8 +356,9 @@ article.activities{
   background-color: white;
   border-radius: var(--radius);
   display: flex;
-  min-width: 408px;
+  min-width: 380px;
   height: auto;
+  box-shadow: var(--light-shadow);
 }
 .tab-btn:nth-child(1){
   border-top-left-radius: var(--radius);
@@ -377,6 +378,28 @@ article.activities{
   display: block;
 }
 article.activity-content {
-  padding-top: 1rem;
-  padding-left: 1rem;
+  padding:1rem;
+}
+@media screen and (max-width: 420px) {
+  .activities-section{
+    padding: 1rem;
+  }
+  article.activities{
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:350px;
+    height: auto;
+  }
+  .tab-btn{
+    font-size: 0.876rem;
+  }
+  .tab-btn:nth-child(3) {
+    border-top-right-radius: var(--radius);
+  }
+  
 }
