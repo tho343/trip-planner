@@ -151,7 +151,7 @@ const activities = [
         id: 1,
         day: "Saturday",
         date: "01/28/2023",
-        plan: "<ul><li>8:00am : luggage checking <li><li>10:00am - 3:00pm : chinatown<li> <li>3:00 : Checking hotel<li><li> <li>8:00pm : timesquare <li></ul>" 
+        plan: "<table><tr><th>time</th><th>activities</th></tr><tr><td>8:00am</td><td>Luggage Checking</td></tr><tr><td>3:00pm</td><td>China town</td></tr></table>" 
     },
     {
         id: 2,
@@ -169,19 +169,19 @@ const activities = [
         id: 4,
         day: "Tuesday",
         date: "02/01/2023",
-        plan: "<ul><li>4:00pm : Train to NewYork<li><li>7:00pm : Korean town</li></ul>" 
+        plan: "<table><tr><th>time</th><th>activities</th></tr><tr><td>4:00pm</td><td>train to new york</td></tr><tr><td>7:00pm</td><td>Korean town</td></tr></table>" 
     },
     {
         id: 5,
         day: "Wednesday",
         date: "02/02/2023",
-        plan: "<ul><li>1:30pm Summit one vanderbilt<li><ul><li>6:15pm : Omakase (Takumi 181 Essex St, New York, NY 10002)<li></ul></ul>" 
+        plan: "<table><tr><th>time</th><th>activities</th></tr><tr><td>1:30pm</td><td>Summit One Vanderbilt</td></tr><tr><td>6:15pm</td><td>Omakase</td></tr></table>" 
     },
     {
         id: 6,
         day: "Thursday",
         date: "02/03/2023",
-        plan: "<ul><li>9:30am : Nu than tu do<li></ul>" 
+        plan: "<table><tr><th>time</th><th>activities</th></tr><tr><td>9:30am</td><td>Statue of Liberty</td></tr></table>" 
     }
 ]
 const activity = document.querySelector(".activities");

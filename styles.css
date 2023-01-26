@@ -382,6 +382,9 @@ article.activities{
 article.activity-content {
   padding:1rem;
 }
+th,td{
+  padding: 0.5rem;
+}
 
 @media screen and (max-width: 420px) {
   .activities-section{
