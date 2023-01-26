@@ -356,6 +356,8 @@ article.activities{
   background-color: white;
   border-radius: var(--radius);
   display: flex;
+  min-width: 408px;
+  height: auto;
 }
 .tab-btn:nth-child(1){
   border-top-left-radius: var(--radius);
