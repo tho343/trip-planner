@@ -134,10 +134,10 @@ let weather = {
         const {speed} = data.wind;
         const {humidity} = data.main;
         const {icon} = data.weather[0];
-        document.querySelector(".temp").innerHTML = `${temp} °C`;
-        document.querySelector(".description").innerHTML = `${description}`;
-        document.querySelector(".humidity").innerHTML = `Humidity: ${humidity} %`;
-        document.querySelector(".wind").innerHTML = `Wind speed: ${speed} km/h`;
+        document.querySelector(".temp").innerHTML = `<h3>${temp} °C</h3>`;
+        document.querySelector(".description").innerHTML = `<h3>${description}</h3>`;
+        document.querySelector(".humidity").innerHTML = `<h3>Humidity: ${humidity} %</h3>`;
+        document.querySelector(".wind").innerHTML = `<h3>Wind speed: ${speed} km/h</h3>`;
         document.querySelector(".icon").src = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
     }
 }
