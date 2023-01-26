@@ -363,7 +363,9 @@ article.activities{
 .tab-btn:nth-child(1){
   border-top-left-radius: var(--radius);
 }
-
+.tab-btn:last-child{
+  border-bottom-left-radius: var(--radius);
+}
 .tab-btn:hover:not(.active){
   background-color: var(--clr-primary-10);
   color:var(--clr-primary-5);
@@ -380,6 +382,7 @@ article.activities{
 article.activity-content {
   padding:1rem;
 }
+
 @media screen and (max-width: 420px) {
   .activities-section{
     padding: 1rem;
@@ -400,6 +403,9 @@ article.activity-content {
   }
   .tab-btn:nth-child(3) {
     border-top-right-radius: var(--radius);
+  }
+  .tab-btn:last-child{
+    border-bottom-left-radius:0;
   }
   
 }
