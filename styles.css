@@ -330,6 +330,7 @@ section#weather {
   padding: 5rem 5rem;
 }
 
+
 /*===activity===*/
 .tab-btn{
   padding: 1rem 1rem;
@@ -415,4 +416,10 @@ th,td{
     border-bottom-left-radius:0;
   }
   
+}
+footer.section{
+  background-color: var(--clr-blue-2);
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }

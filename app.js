@@ -231,3 +231,6 @@ const displayButton = (dayActivity) =>{
     }).join("");
     btnsContainer.innerHTML = showButton;
 }
+//footer
+const today = new Date();
+document.querySelector(".date").innerHTML = today.getFullYear();
