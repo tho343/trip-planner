@@ -330,3 +330,44 @@ section#weather {
   padding: 5rem 5rem;
 }
 
+/*===activity===*/
+.tab-btn{
+  padding: 1rem 0;
+  border:none;
+  text-transform: capitalize;
+  font-size: 1rem;
+  display: block;
+  background: var(--clr-blue-9);
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: var(--spacing);
+}
+.btn-container{
+  display: flex;
+  flex-direction: column;
+}
+.activities-section{
+  padding:5rem;
+}
+article.activities{
+  background-color: white;
+  border-radius: var(--radius);
+  display: flex;
+}
+.tab-btn:nth-child(1){
+  border-top-left-radius: var(--radius);
+}
+
+.tab-btn:hover:not(.active){
+  background-color: var(--clr-primary-10);
+  color:var(--clr-primary-5);
+}
+.content {
+  display: none;
+}
+.tab-btn.active{
+  background-color: white;
+}
+.content.active{
+  display: block;
+}

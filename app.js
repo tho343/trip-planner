@@ -144,3 +144,89 @@ let weather = {
 window.addEventListener("load",function(){
     weather.fetchWeather();
 })
+
+///activities section
+const activities = [
+    {
+        id: 1,
+        day: "Saturday",
+        date: "01/28/2023",
+        plan: "8AM: checkin" 
+    },
+    {
+        id: 2,
+        day: "Sunday",
+        date: "01/29/2023",
+        plan: "skiiing" 
+    },
+    {
+        id: 3,
+        day: "Monday",
+        date: "01/30/2023",
+        plan: "8AM: checkin" 
+    },
+    {
+        id: 4,
+        day: "Tuesday",
+        date: "02/01/2023",
+        plan: "8AM: checkin" 
+    },
+    {
+        id: 5,
+        day: "Wednesday",
+        date: "02/02/2023",
+        plan: "8AM: checkin" 
+    },
+    {
+        id: 6,
+        day: "Thursday",
+        date: "02/03/2023",
+        plan: "8AM: checkin" 
+    }
+]
+const activity = document.querySelector(".activities");
+
+const activityContent = document.querySelector(".activity-content");
+const btnsContainer = document.querySelector(".btn-container");
+window.addEventListener("DOMContentLoaded",function(){
+    displayPlan(activities);
+    displayButton(activities);
+    const btns = document.querySelectorAll(".tab-btn");
+    const articles = document.querySelectorAll(".content");
+activity.addEventListener("click",function(e){
+    const id = e.target.dataset.id;
+    console.log(e.classList);
+    if(id){
+        btns.forEach(function(item){
+            item.classList.remove("active");
+            e.target.classList.add("active");
+        })
+    }
+    if(id){
+        articles.forEach(function(item){
+            item.classList.remove("active");
+
+        })
+        document.getElementById(id).classList.add("active");
+    }
+})
+})
+
+const displayPlan = (dayActivity) =>{
+    let showDay = dayActivity.map(function(day){
+        let dayActivity = `<div class="content" id=${day.date}>
+                        <h3>${day.plan}</h3>
+                    </div>`;
+                    return dayActivity;
+    }
+    )
+    showDay = showDay.join("");
+    activityContent.innerHTML = showDay;
+
+}
+const displayButton = (dayActivity) =>{
+    let showButton = dayActivity.map(function(day){
+        return `<button class="tab-btn active" data-id="${day.date}">${day.date}</button>`
+    }).join("");
+    btnsContainer.innerHTML = showButton;
+}
