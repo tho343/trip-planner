@@ -356,7 +356,7 @@ article.activities{
   background-color: white;
   border-radius: var(--radius);
   display: flex;
-  min-width: 380px;
+  min-width: 350px;
   height: auto;
   box-shadow: var(--light-shadow);
 }
@@ -388,7 +388,10 @@ th,td{
 
 @media screen and (max-width: 420px) {
   .activities-section{
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
   article.activities{
     max-width: 350px;
@@ -403,6 +406,7 @@ th,td{
   }
   .tab-btn{
     font-size: 0.876rem;
+    padding: 0.725rem;
   }
   .tab-btn:nth-child(3) {
     border-top-right-radius: var(--radius);
